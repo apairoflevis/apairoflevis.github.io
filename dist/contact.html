@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Tinos" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Windows</title>
 </head>
 
-<body>
+<body id="retro">
     <header class="header shadow">
         <a href="">
             <input id="start" type="image" img src="img/start1.gif" alt="" class="main-nav-button main-nav-button--off">
@@ -56,24 +57,64 @@
             </ul>
         </nav>
     </header>
-    <!--Main-->
 
-    <div class="container">
-        <div id="derp"></div>
-        <h1 class="greeting">windows</h1>
-        <h1 id="try" class="greeting">Wave</h1>
-        <h1 class="greeting1">windows</h1>
-        <h1 id="try1" class="greeting1">Wave</h1>
-        <h1 class="greeting2">windows</h1>
-        <h1 id="try2" class="greeting">Wave</h1>
+    <!--Main-->
+    <div class="wrapper">
+
+        <div class="jobbity">
+            <ul>
+                <h1 class="info">Contact Me!</h1>
+                <li class="listing">
+                    <span class="text-secondary">Email:</span> <a class="contact-color" href="mailto:Andrew@dlpwebdesign.com">
+                        Andrew@dlpwebdesign.com
+                    </a>
+                </li>
+                <li class="listing">
+                    <span class="text-secondary">Phone:</span><a class="contact-color" href="tel:361-423-0366">
+                        361-423-0366</a>
+
+                </li>
+                <li class="listing">
+                    <span class="text-secondary">Check out my: </span><a class="contact-color" href="" target="_blank">Github</a>
+                </li>
+                <li class="listing">
+                    <span class="text-secondary">Job offers: </span><a class="contact-color" href="https://www.linkedin.com"
+                        target="_blank">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <a href="index.html">
+            <input type="image" img src="img/unicorn1.png" alt="" class="back-btn">
+        </a>
     </div>
 
 
+    <!--Modal-->
+    <div id="popModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a id="btnClose" class="close-btn">&times;</a>
+                <h2>HIRE HUNGRY TALENT!</h2>
+            </div>
+            <div class="modal-body">
+                <img class="okcomp" src="img/thumbs.gif" alt="">
+                <p>Web Developers in your area are looking for work! Click here for more info!</p>
+                <p class="small">P.S. I am willing to relocate if the opportunity presents itself!</p>
+            </div>
+            <div class="modal-footer">
+                <h5>A DLP Web Design Production</h5>
+            </div>
+        </div>
+    </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    <script src="js/mod.js"></script>
 </body>
 
 </html>

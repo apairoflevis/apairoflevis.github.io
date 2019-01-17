@@ -11,17 +11,8 @@ $(document.body).click(function () {
 });
 $('.main-nav').hide();
 
-//Time
-var myVar = setInterval(function () {
-    myTimer();
-}, 1000);
 
-function myTimer() {
-    var d = new Date();
-    document.getElementById("time").innerHTML = d.toLocaleTimeString();
-}
-
-//Project Clock
+// Clock
 var myVar = setInterval(function () {
     myTimer();
 }, 1000);

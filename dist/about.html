@@ -12,64 +12,104 @@
     <title>Windows</title>
 </head>
 
-<body>
-    <main class="wrapper">
-        <header class="header shadow">
-            <a href="">
-                <input id="start" type="image" img src="img/start1.gif" alt="" class="main-nav-button main-nav-button--off">
-            </a>
+<body id="retro">
 
-            <p id="time"></p>
+    <header class="header shadow">
+        <a href="">
+            <input id="start" type="image" img src="img/start1.gif" alt="" class="main-nav-button main-nav-button--off">
+        </a>
 
-            <nav class="main-nav nav shadow" style="display: none;">
-                <ul>
-                    <li>
-                        <a href="#" class="main-nav__item">
-                            <span class="underline">A</span>bout
-                            <img class="nav-icon" src="img/about-icon.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com" target="_blank" class="main-nav__item">
-                            <span class="underline">P</span>rojects
-                            <img class="nav-icon" src="img/projects-icon.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="main-nav__item">
-                            <span class="underline">O</span>ld
-                            <img class="nav-icon" src="img/other-icon.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/watch?v=8GW6sLrK40k" target="_blank" class="main-nav__item">
-                            <span class="underline">N</span>ostalgia
-                            <img class="nav-icon" src="img/muzak.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="main-nav__item main-nav__item--last">
-                            <span class="underline">C</span>ontact
-                            <img class="nav-icon" src="img/contact-icon.png" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <div class="retro">
-            <div>
-                <h1>About Me</h1>
-            </div>
+        <p id="time"></p>
+
+        <nav class="main-nav nav shadow" style="display: none;">
+            <ul>
+                <li>
+                    <a href="#" class="main-nav__item">
+                        <span class="underline">A</span>bout
+                        <img class="nav-icon" src="img/about-icon.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html" target="_blank" class="main-nav__item">
+                        <span class="underline">P</span>rojects
+                        <img class="nav-icon" src="img/projects-icon.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="main-nav__item">
+                        <span class="underline">O</span>ld
+                        <img class="nav-icon" src="img/other-icon.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=8GW6sLrK40k" target="_blank" class="main-nav__item">
+                        <span class="underline">N</span>ostalgia
+                        <img class="nav-icon" src="img/muzak.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="main-nav__item main-nav__item--last">
+                        <span class="underline">C</span>ontact
+                        <img class="nav-icon" src="img/contact-icon.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 
+
+    <div class="stuff">
+        <h1 class="hello">About Me</h1>
+        <div class="trees">
+            <img src="img/outline.png" alt="Life">
+            <img src="img/outline.png" alt="Life">
         </div>
+        <div class="bananas">
+            <h4 class="segway">Who am I?</h4>
+        </div>
+        <p class="lead">I am an aspiring front-end developer based in South Texas. I started learning
+            web development back in 2018 as a hobby, but decide to turn a hobby into a possible career.
+            I enjoy the creativity and challenges that come with learning web development and am always
+            learning every day.
+        </p>
+        <div class="bananas">
+            <h4 class="segway">What is this website?</h4>
+        </div>
+        <p class="lead">First and foremost I grew up in the 90s and still listen to golden age hip-hop.
+            Secondly, anyone who lived during the 90s can remember the geocities websites that many a young teen
+            created.
+            Unfortunately, due to a lack of a financial portfolio, I was unable to leave my mark on the young digital
+            landscape of the Internet (at the time), but now that my financial portfolio is growing <s>it really isn't</s>,
+            I can finally recreate all the 90s websites to my hearts content. Honestly, I just really like the
+            vaporwave
+            style and wanted to make a website in a vaporwave format.
+        </p>
+        <div class="bananas">
+            <h4 class="segway">Skills & Misc.</h4>
+        </div>
+        <p class="lead">I have familiarity with JS, jQuery, HTML, CSS3, SASS & Bootstrap4.
+            I also have experience utilizing Git and Photoshop when needed.
+        </p>
+        <figure>
+            <img class="resize" src="img/motivation.png" alt="Life">
+            <figcaption class="grad">Aesthetic</figcaption>
+        </figure>
+        <div class="trees">
+            <img src="img/outline.png" alt="Life">
+            <img src="img/outline.png" alt="Life">
+        </div>
+        <a href="index.html">
+            <input type="image" img src="img/unicorn1.png" alt="" class="home-btn">
+        </a>
+    </div>
 
 
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
