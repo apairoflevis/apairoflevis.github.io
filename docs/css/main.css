@@ -563,21 +563,22 @@ img { max-width: 100%; }
     top: 0;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
     pointer-events: none;
     z-index: 1;
 }
 
 .watermark-logo {
+    position: absolute;
+    top: calc(50% - 140px);
+    left: 0;
     width: 22px;
     opacity: .3;
     filter: drop-shadow(0 0 6px rgba(1, 252, 253, .2));
 }
 
 .page-watermark span {
+    display: block;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     font-family: 'Montserrat', sans-serif;
