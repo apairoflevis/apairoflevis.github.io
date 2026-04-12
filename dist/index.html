@@ -4,75 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Tinos" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <title>Windows</title>
+    <title>APairOfLevis95</title>
 </head>
 
 <body>
-    <header class="header shadow">
-        <a href="">
-            <input id="start" type="image" img src="img/start1.gif" alt="" class="main-nav-button main-nav-button--off">
-        </a>
 
-        <p id="time"></p>
+    <main class="desktop">
+        <div class="desktop-icons">
+            <a href="about.html" class="desktop-icon">
+                <img src="img/calming_icons_32x32/contact_book.png" alt="About Me">
+                <span>About Me</span>
+            </a>
+            <a href="projects.html" class="desktop-icon">
+                <img src="img/calming_icons_32x32/folder_closed.png" alt="Projects">
+                <span>Projects</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=8GW6sLrK40k" target="_blank" class="desktop-icon">
+                <img src="img/calming_icons_32x32/music.png" alt="Nostalgia">
+                <span>Nostalgia</span>
+            </a>
+            <a href="https://github.com" target="_blank" class="desktop-icon">
+                <img src="img/calming_icons_32x32/github.png" alt="GitHub">
+                <span>GitHub</span>
+            </a>
+        </div>
+        <div class="hero">
+            <div class="hero-bg"></div>
+        </div>
+        <div class="brand-lockup">
+            <img class="brand-logo" src="img/pngegg.png" alt="Windows 95">
+            <div class="brand-text">
+                <span class="brand-top neon-cyan">APairOf</span>
+                <span class="brand-bottom neon-pink">Levis95</span>
+            </div>
+        </div>
+    </main>
 
-        <nav class="main-nav nav shadow" style="display: none;">
-            <ul>
-                <li>
-                    <a href="about.html" target="_blank" class="main-nav__item">
-                        <span class="underline">A</span>bout
-                        <img class="nav-icon" src="img/about-icon.png" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="projects.html" target="_blank" class="main-nav__item">
-                        <span class="underline">P</span>rojects
-                        <img class="nav-icon" src="img/projects-icon.png" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="main-nav__item">
-                        <span class="underline">O</span>ld
-                        <img class="nav-icon" src="img/other-icon.png" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/watch?v=8GW6sLrK40k" target="_blank" class="main-nav__item">
-                        <span class="underline">N</span>ostalgia
-                        <img class="nav-icon" src="img/muzak.png" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html" class="main-nav__item main-nav__item--last">
-                        <span class="underline">C</span>ontact
-                        <img class="nav-icon" src="img/contact-icon.png" alt="">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!--Main-->
-
-    <div class="container">
-        <div id="derp"></div>
-        <h1 class="greeting">windows</h1>
-        <h1 id="try" class="greeting">Wave</h1>
-        <h1 class="greeting1">windows</h1>
-        <h1 id="try1" class="greeting1">Wave</h1>
-        <h1 class="greeting2">windows</h1>
-        <h1 id="try2" class="greeting">Wave</h1>
+    <div class="taskbar">
+        <div class="start-wrapper">
+            <nav class="start-menu" id="start-menu">
+                <div class="start-menu-sidebar"><span>APairOfLevis95</span></div>
+                <ul class="start-menu-items">
+                    <li><a href="about.html"><img class="nav-icon" src="img/about-icon.png" alt=""><span><u>A</u>bout</span></a></li>
+                    <li><a href="projects.html"><img class="nav-icon" src="img/projects-icon.png" alt=""><span><u>P</u>rojects</span></a></li>
+                    <li class="separator"></li>
+                    <li><a href="https://www.youtube.com/watch?v=8GW6sLrK40k" target="_blank"><img class="nav-icon" src="img/muzak.png" alt=""><span><u>N</u>ostalgia</span></a></li>
+                </ul>
+            </nav>
+            <button class="start-btn" id="start-btn">
+                <img src="img/start1.gif" alt="Start">
+            </button>
+        </div>
+        <div class="clock-area" id="clock"></div>
     </div>
 
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 
