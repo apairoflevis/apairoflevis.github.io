@@ -24,63 +24,59 @@
 
     renderTaskbar();
 
-    // Start Menu
     var startBtn = document.getElementById('start-btn');
     var startMenu = document.getElementById('start-menu');
 
-    startBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        startMenu.classList.toggle('open');
-        startBtn.classList.toggle('active');
-    });
+    function closeStartMenu() {
+        if (startMenu) startMenu.classList.remove('open');
+        if (startBtn) startBtn.classList.remove('active');
+    }
 
-    document.addEventListener('click', function () {
-        startMenu.classList.remove('open');
-        startBtn.classList.remove('active');
-    });
+    if (startBtn && startMenu) {
+        startBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            startMenu.classList.toggle('open');
+            startBtn.classList.toggle('active');
+        });
+        startMenu.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+    }
 
-    startMenu.addEventListener('click', function (e) {
-        e.stopPropagation();
-    });
+    // Global click: close start menu + handle window controls (delegated)
+    document.addEventListener('click', function (e) {
+        closeStartMenu();
 
-    // Escape key closes start menu
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-            startMenu.classList.remove('open');
-            startBtn.classList.remove('active');
+        var btn = e.target.closest('.window-controls button');
+        if (!btn) return;
+        var win = btn.closest('.win95-window');
+        if (!win) return;
+
+        switch (btn.getAttribute('aria-label')) {
+            case 'Close':
+                window.location.href = 'index.html';
+                break;
+            case 'Minimize':
+                win.classList.toggle('minimized');
+                win.classList.remove('maximized');
+                break;
+            case 'Maximize':
+                win.classList.toggle('maximized');
+                win.classList.remove('minimized');
+                break;
         }
     });
 
+    // Escape closes start menu
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeStartMenu();
+    });
+
     // Clock
+    var clockEl = document.getElementById('clock');
     function updateClock() {
-        var el = document.getElementById('clock');
-        if (el) el.textContent = new Date().toLocaleTimeString();
+        if (clockEl) clockEl.textContent = new Date().toLocaleTimeString();
     }
     updateClock();
     setInterval(updateClock, 1000);
-
-    // Window close button → back to home
-    document.querySelectorAll('.window-close').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            window.location.href = 'index.html';
-        });
-    });
-
-    // Window minimize button
-    document.querySelectorAll('.window-controls button[aria-label="Minimize"]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            var win = btn.closest('.win95-window');
-            win.classList.toggle('minimized');
-            win.classList.remove('maximized');
-        });
-    });
-
-    // Window maximize button
-    document.querySelectorAll('.window-controls button[aria-label="Maximize"]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            var win = btn.closest('.win95-window');
-            win.classList.toggle('maximized');
-            win.classList.remove('minimized');
-        });
-    });
 })();
