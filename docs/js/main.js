@@ -9,10 +9,10 @@
                         '<li><a href="about.html"><img class="nav-icon" src="img/about-icon.png" alt=""><span><u>A</u>bout</span></a></li>' +
                         '<li><a href="projects.html"><img class="nav-icon" src="img/projects-icon.png" alt=""><span><u>P</u>rojects</span></a></li>' +
                         '<li class="separator"></li>' +
-                        '<li><a href="https://www.youtube.com/watch?v=8GW6sLrK40k" target="_blank"><img class="nav-icon" src="img/muzak.png" alt=""><span><u>N</u>ostalgia</span></a></li>' +
+                        '<li><a href="https://www.youtube.com/watch?v=8GW6sLrK40k" target="_blank" rel="noopener noreferrer"><img class="nav-icon" src="img/muzak.png" alt=""><span><u>N</u>ostalgia</span></a></li>' +
                     '</ul>' +
                 '</nav>' +
-                '<button class="start-btn" id="start-btn">' +
+                '<button class="start-btn" id="start-btn" aria-label="Start menu" aria-expanded="false" aria-controls="start-menu">' +
                     '<img src="img/start1.gif" alt="Start">' +
                 '</button>' +
             '</div>' +
@@ -29,18 +29,22 @@
 
     function closeStartMenu() {
         if (startMenu) startMenu.classList.remove('open');
-        if (startBtn) startBtn.classList.remove('active');
+        if (startBtn) {
+            startBtn.classList.remove('active');
+            startBtn.setAttribute('aria-expanded', 'false');
+        }
     }
 
     if (startBtn && startMenu) {
         startBtn.addEventListener('click', function (e) {
             e.stopPropagation();
-            startMenu.classList.toggle('open');
-            startBtn.classList.toggle('active');
+            var open = startMenu.classList.toggle('open');
+            startBtn.classList.toggle('active', open);
+            startBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
-        startMenu.addEventListener('click', function (e) {
-            e.stopPropagation();
-        });
+        // Intentionally no stopPropagation here: clicks on menu items
+        // bubble to the document handler so the menu closes even when
+        // the link target is target="_blank" (stays on current page).
     }
 
     // Global click: close start menu + handle window controls (delegated)

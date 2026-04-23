@@ -4,7 +4,10 @@
   "description": "APairOfLevis95 — Win95 vaporwave portfolio",
   "private": true,
   "scripts": {
-    "start": "npx serve docs -l 3000"
+    "start": "serve docs -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
   },
   "author": "Andrew De La Paz",
   "license": "MIT"

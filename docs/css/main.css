@@ -181,9 +181,14 @@ img { max-width: 100%; }
 }
 
 .desktop-icon:hover span,
-.desktop-icon:focus span {
+.desktop-icon:focus-visible span {
     background: rgba(0, 0, 128, .6);
     outline: 1px dotted rgba(255, 255, 255, .6);
+}
+
+.desktop-icon:focus-visible {
+    outline: 2px dotted rgba(1, 252, 253, .8);
+    outline-offset: 2px;
 }
 
 .desktop-icon:hover img,
@@ -538,7 +543,14 @@ img { max-width: 100%; }
     transition: transform .15s;
 }
 
-.project-card:hover { transform: translateY(-2px); }
+.project-card:not([aria-disabled="true"]):hover { transform: translateY(-2px); }
+
+.project-card[aria-disabled="true"] { cursor: default; }
+
+.project-card:focus-visible {
+    outline: 2px dotted rgba(1, 252, 253, .8);
+    outline-offset: 2px;
+}
 
 .project-card-body { padding: 10px; }
 
